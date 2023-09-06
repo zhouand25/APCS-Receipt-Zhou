@@ -19,10 +19,10 @@ public class receiptcreator {
         double fulltotal=total*1.03;
         double tax=total*0.03;
 
-        output="\n"+"Your Purchase:\n"+qRed+" Red Apples"+"\n"+qIron+" Iron Apples"+"\n"+qGold+" Gold Apples"+"\n";
-        output="Price of Goods: "+total+".00$\n";
-        output="Tax: "+tax+"$ Trust me friend pay your taxes, it's not worth messing with the IRS!\n";
-        output="Final: "+fulltotal+"$\n";
+        output+="\n"+"Your Purchase:\n"+qRed+" Red Apples"+"\n"+qIron+" Iron Apples"+"\n"+qGold+" Gold Apples"+"\n";
+        output+="Price of Goods: "+total+".00$\n";
+        output+="Tax: "+String.format("%.2f", tax)+"$ Trust me friend pay\nyour taxes, it's not worth messing with the IRS!\n";
+        output+="Final: "+String.format("%.2f", fulltotal)+"$\n";
         for(int i=0;i<40;++i) {
             output+="*";
         }
