@@ -15,11 +15,15 @@ public class receiptcreator {
         Scanner quantGold = new Scanner(System.in);
         int qGold = quantGold.nextInt();
 
-        int total=(1*qRed)+(50*qIron)+(10000*qGold);
+        int priceRed=1*qRed;
+        int priceIron=50*qIron;
+        int priceGold=10000*qGold;
+
+        int total=priceRed+priceIron+priceGold;
         double fulltotal=total*1.03;
         double tax=total*0.03;
 
-        output+="\n"+"Your Purchase:\n"+qRed+" Red Apples"+"\n"+qIron+" Iron Apples"+"\n"+qGold+" Gold Apples"+"\n";
+        output+="\n"+"Your Purchase:\tPrice:\n"+qRed+" Red Apples\t"+priceRed+"$.00"+"\n"+qIron+" Iron Apples\t"+priceIron+"$.00"+"\n"+qGold+" Gold Apples\t"+priceGold+"$.00"+"\n";
         output+="Price of Goods: "+total+".00$\n";
         output+="Tax: "+String.format("%.2f", tax)+"$ Trust me friend pay your\ntaxes, it's not worth messing with the IRS!\n";
         output+="Total: "+String.format("%.2f", fulltotal)+"$\n";
