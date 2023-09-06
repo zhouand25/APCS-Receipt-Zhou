@@ -21,11 +21,13 @@ public class receiptcreator {
 
         output+="\n"+"Your Purchase:\n"+qRed+" Red Apples"+"\n"+qIron+" Iron Apples"+"\n"+qGold+" Gold Apples"+"\n";
         output+="Price of Goods: "+total+".00$\n";
-        output+="Tax: "+String.format("%.2f", tax)+"$ Trust me friend pay\nyour taxes, it's not worth messing with the IRS!\n";
-        output+="Final: "+String.format("%.2f", fulltotal)+"$\n";
+        output+="Tax: "+String.format("%.2f", tax)+"$ Trust me friend pay your\ntaxes, it's not worth messing with the IRS!\n";
+        output+="Total: "+String.format("%.2f", fulltotal)+"$\n";
+        output+="Alright, now I need to find some gold paint.\n";
         for(int i=0;i<40;++i) {
             output+="*";
         }
-        System.out.print(output);
+        System.out.println(output);
+
     }
 }
